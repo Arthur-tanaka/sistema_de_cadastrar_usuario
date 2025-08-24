@@ -4,7 +4,7 @@ sistema = Opcoes()
 
 while True:
     print("*-"*20)
-    print("1 - Cadastrar usuário\n2 - Listar usuários\n3 - Buscar usuário\n4 - Sair")
+    print("1 - Cadastrar usuário\n2 - Listar usuários\n3 - Buscar usuário\n4 - Atualizar usuário\n5 - Deletar usuário\n6 - Sair")
     
     opcao = input("Escolha uma opção: ")
     
@@ -21,7 +21,15 @@ while True:
         nome = input("Digite o nome para buscar: ")
         sistema.buscar_usuario(nome)
 
-    elif opcao == "4":
+    elif opcao =="4":
+        nome = input("Digite o nome do usuario que deseja atualizar: ")
+        sistema.atualizar_usuario(nome)
+
+    elif opcao == "5":
+        nome = input("Digite o nome da pessoa que deseja deletar: ")
+        sistema.deletar_usuario(nome)    
+    
+    elif opcao == "6":
         print("Saindo...")
         break
 
